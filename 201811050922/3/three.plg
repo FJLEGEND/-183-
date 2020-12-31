@@ -1,0 +1,25 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: three - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\±¦¸ç\AppData\Local\Temp\RSP53FA.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/three.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\±¦¸ç\Desktop\three.cpp"
+]
+Creating command line "cl.exe @"C:\Users\±¦¸ç\AppData\Local\Temp\RSP53FA.tmp"" 
+<h3>Output Window</h3>
+Compiling...
+three.cpp
+
+
+
+<h3>Results</h3>
+three.obj - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
