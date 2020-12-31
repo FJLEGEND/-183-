@@ -1,7 +1,61 @@
-﻿// 6.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
+﻿//编写一个程序，有一个汽车类vehicle, 它具有一个需传递参数的构造函数，类中的数据成员：车轮个数wheels和车重weight放在保护段中；
+//小车类car是它的私有派生类，其中包含载人数passenger_load；
+//卡车类truck是vehicle的私有派生类，其中包含载人类passenger_load和载重量payload。
+//每个类都有相关数据的输出方法。
 //
 
 #include <iostream>
+using namespace std;
+class vehicle
+{
+public:
+	vehicle(int a,float b)
+	{
+		//cout << "已构造" << endl;
+		wheels = a;
+		weight = b;
+	}
+	 ~vehicle()
+	{
+		cout << "已析构" << endl;
+	}
+	virtual void show() = 0;
+protected:
+	int wheels=0;
+	float weight=0;
+};
+
+class car:private vehicle
+{
+	car(int i, float j, int k):vehicle(i,j)
+	{
+		cout << "已构造" << endl;
+		passenger_load = k;
+	}
+	~car();
+	void show()
+	{
+		cout << "车轮个数：" << wheels << endl;
+		cout << "车重：" << weight << endl;
+		cout << "载人数：" << passenger_load << endl;
+	}
+private:
+	int passenger_load;
+};
+
+class truck:private vehicle
+{
+	truck(int i, float j, int k, float l) :vehicle(i,j)
+	{
+		cout << "已构造" << endl;
+		passenger_load = k;
+		payload = l;
+	}
+	~truck();
+private:
+	int passenger_load;
+	float payload;
+};
 
 int main()
 {
