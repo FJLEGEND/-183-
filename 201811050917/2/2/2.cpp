@@ -150,8 +150,8 @@ int main()
     cout << "数组:" << endl;
     shuzu(m,n);
     //链表
-    //cout << "链表:" << endl;
-    //lianbiao(m,n);
+    cout << "链表:" << endl;
+    lianbiao(m,n);
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
